@@ -1,0 +1,807 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Shop quality automotive parts, car accessories, engine oils, filters, batteries and maintenance products at Stackly Auto Care."
+  >
+
+  <meta name="theme-color" content="#101d3a">
+
+  <title>Shop Auto Parts | Stackly Auto Care</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="shop.css">
+</head>
+
+<body class="shop-page">
+
+  <!-- ORIGINAL PRELOADER FROM INDEX.HTML -->
+  <div class="preloader" id="preloader" aria-label="Loading AUTO-CARE">
+    <div class="preloader-content">
+
+      <div class="preloader-logo">
+        AUTO<span>CARE</span>
+      </div>
+
+      <div class="preloader-car" aria-hidden="true">🏎️</div>
+
+      <p class="preloader-message">
+        Preparing your journey...
+      </p>
+
+      <div class="preloader-track">
+        <div class="preloader-progress"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+
+      <!-- ORIGINAL STACKLY LOGO -->
+      <a
+        href="index.html"
+        class="site-logo"
+        aria-label="STACKLY AUTO CARE Home"
+      >
+        <img
+          src="assets/logo/stackly%20logo.webp"
+          alt="STACKLY AUTO CARE"
+        >
+      </a>
+
+      <!-- NAVIGATION -->
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+
+        <a href="index.html" class="nav-link">Home</a>
+
+        <a href="services.html" class="nav-link">Services</a>
+
+        <a
+          href="shop.html"
+          class="nav-link active"
+          aria-current="page"
+        >
+          Shop
+        </a>
+
+        <a href="about.html" class="nav-link">About Us</a>
+
+        <a href="contact.html" class="nav-link">Contact</a>
+
+        <!-- MOBILE MENU ACTIONS -->
+        <div class="mobile-nav-actions">
+
+          <!-- LOGIN: USE A DIFFERENT CLASS TO AVOID HEADER-LOGIN HIDING RULES -->
+          <a
+            href="login.html"
+            class="btn btn-primary btn-full mobile-login-button"
+          >
+            Login
+          </a>
+
+          <!-- EXISTING BOOK A SERVICE BUTTON -->
+          <a
+            href="services.html#serviceBooking"
+            class="header-cta"
+          >
+            Book a Service
+          </a>
+
+        </div>
+
+      </nav>
+
+      <!-- DESKTOP HEADER ACTIONS -->
+      <div class="header-actions">
+
+        <a href="login.html" class="header-login">
+          Login
+        </a>
+
+        <a
+          href="services.html#serviceBooking"
+          class="header-cta"
+        >
+          Book a Service
+        </a>
+
+        <!-- MOBILE HAMBURGER -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- SHOP HERO -->
+    <section class="shop-hero">
+      <div class="container shop-hero-container">
+
+        <div class="shop-hero-content">
+
+          <span class="section-eyebrow">
+            STACKLY AUTO CARE STORE
+          </span>
+
+          <h1>
+            Everything Your Car
+            <span>Needs.</span>
+          </h1>
+
+          <p>
+            Discover quality automotive parts, essential maintenance
+            products and accessories designed to keep your vehicle
+            performing at its best.
+          </p>
+
+          <div class="shop-hero-actions">
+
+            <a href="#shopProducts" class="btn btn-primary">
+              Explore Products
+            </a>
+
+            <a href="contact.html" class="btn btn-outline">
+              Need Help?
+            </a>
+
+          </div>
+
+          <div class="shop-trust-points">
+
+            <span>
+              <span aria-hidden="true">✓</span>
+              Quality Products
+            </span>
+
+            <span>
+              <span aria-hidden="true">✓</span>
+              Easy Shopping
+            </span>
+
+            <span>
+              <span aria-hidden="true">✓</span>
+              Expert Assistance
+            </span>
+
+          </div>
+
+        </div>
+
+        <div class="shop-hero-visual">
+
+          <div class="shop-hero-orbit shop-hero-orbit-one"></div>
+          <div class="shop-hero-orbit shop-hero-orbit-two"></div>
+
+          <div class="shop-hero-image-wrap">
+
+            <img
+              class="shop-hero-image"
+              src="assets/shop/car parts.webp"
+              alt="Automotive engine components"
+              loading="eager"
+              fetchpriority="high"
+            >
+
+          </div>
+
+          <div class="shop-hero-floating-card shop-floating-card-one">
+
+            <span class="shop-floating-icon" aria-hidden="true">✓</span>
+
+            <div>
+              <strong>Quality Parts</strong>
+              <small>Choose with confidence</small>
+            </div>
+
+          </div>
+
+          <div class="shop-hero-floating-card shop-floating-card-two">
+
+            <span class="shop-floating-icon" aria-hidden="true">⚙</span>
+
+            <div>
+              <strong>Auto Essentials</strong>
+              <small>For everyday maintenance</small>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SHOP BENEFITS -->
+    <section class="shop-benefits">
+      <div class="container shop-benefits-grid">
+
+        <article class="shop-benefit-card">
+
+          <div class="shop-benefit-image">
+            <img
+              src="assets/shop/quality products.webp"
+              alt=""
+              loading="lazy"
+            >
+          </div>
+
+          <div>
+            <h3>Quality Products</h3>
+            <p>
+              Find dependable automotive essentials for your vehicle.
+            </p>
+          </div>
+
+        </article>
+
+        <article class="shop-benefit-card">
+
+          <div class="shop-benefit-image">
+            <img
+              src="assets/shop/easy shopping.webp"
+              alt=""
+              loading="lazy"
+            >
+          </div>
+
+          <div>
+            <h3>Easy Shopping</h3>
+            <p>
+              Explore essential vehicle products in one place.
+            </p>
+          </div>
+
+        </article>
+
+        <article class="shop-benefit-card">
+
+          <div class="shop-benefit-image shop-benefit-icon">
+            <span aria-hidden="true">✓</span>
+          </div>
+
+          <div>
+            <h3>Helpful Support</h3>
+            <p>
+              Contact our team for product guidance and assistance.
+            </p>
+          </div>
+
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="shop-products-section" id="shopProducts">
+      <div class="container">
+
+        <div class="shop-section-heading">
+
+          <div>
+            <span class="section-eyebrow">OUR COLLECTION</span>
+
+            <h2>Shop Auto Essentials</h2>
+
+            <p>
+              Browse our automotive products, compare prices and add
+              your favourites to your shopping cart.
+            </p>
+          </div>
+
+          <div
+            class="shop-results-summary"
+            id="shopResultsSummary"
+            aria-live="polite"
+          >
+            Loading products...
+          </div>
+
+        </div>
+
+        <!-- PRODUCT SEARCH -->
+        <form
+          class="shop-search-form"
+          id="shopSearchForm"
+          role="search"
+        >
+
+          <label class="visually-hidden" for="shopSearchInput">
+            Search products
+          </label>
+
+          <span class="shop-search-icon" aria-hidden="true">⌕</span>
+
+          <input
+            type="search"
+            id="shopSearchInput"
+            name="search"
+            placeholder="Search oil, filters, batteries..."
+            autocomplete="off"
+          >
+
+          <button type="submit" class="shop-search-button">
+            Search
+          </button>
+
+        </form>
+
+        <!-- CATEGORY FILTERS AND SORTING -->
+        <div class="shop-filter-toolbar">
+
+          <div class="shop-category-filter">
+
+            <span class="shop-filter-label">
+              Browse Categories
+            </span>
+
+            <div class="shop-categories" id="shopCategories">
+
+              <button
+                type="button"
+                class="shop-category active"
+                data-category="all"
+                aria-pressed="true"
+              >
+                All Products
+              </button>
+
+              <button
+                type="button"
+                class="shop-category"
+                data-category="engine"
+                aria-pressed="false"
+              >
+                Engine
+              </button>
+
+              <button
+                type="button"
+                class="shop-category"
+                data-category="brakes"
+                aria-pressed="false"
+              >
+                Brakes
+              </button>
+
+              <button
+                type="button"
+                class="shop-category"
+                data-category="electrical"
+                aria-pressed="false"
+              >
+                Electrical
+              </button>
+
+              <button
+                type="button"
+                class="shop-category"
+                data-category="maintenance"
+                aria-pressed="false"
+              >
+                Maintenance
+              </button>
+
+              <button
+                type="button"
+                class="shop-category"
+                data-category="accessories"
+                aria-pressed="false"
+              >
+                Accessories
+              </button>
+
+            </div>
+
+          </div>
+
+          <div class="shop-sort-control">
+
+            <label for="shopSort">Sort by</label>
+
+            <select id="shopSort" name="sort">
+              <option value="featured">Featured</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Top Rated</option>
+              <option value="name">Name: A to Z</option>
+            </select>
+
+          </div>
+
+        </div>
+
+        <!-- ACTIVE FILTER -->
+        <div class="shop-active-filter-row">
+
+          <p id="shopActiveFilter" aria-live="polite">
+            Showing all products
+          </p>
+
+          <button
+            type="button"
+            class="shop-clear-filter-button"
+            id="clearCategoryButton"
+            hidden
+          >
+            Clear filters
+          </button>
+
+        </div>
+
+        <!-- PRODUCT GRID -->
+        <div
+          class="shop-products-grid"
+          id="shopProductsGrid"
+          aria-live="polite"
+          aria-busy="true"
+        >
+
+          <div class="shop-loading-state">
+            <span
+              class="shop-loading-spinner"
+              aria-hidden="true"
+            ></span>
+
+            <p>Loading products...</p>
+          </div>
+
+        </div>
+
+        <!-- EMPTY STATE -->
+        <div class="shop-empty-state" id="shopEmptyState" hidden>
+
+          <div class="shop-empty-illustration" aria-hidden="true">
+            !
+          </div>
+
+          <h3>No products found</h3>
+
+          <p>
+            Try another search term or clear your filters to see all products.
+          </p>
+
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="resetShopFilters"
+          >
+            Show All Products
+          </button>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SHOPPING CART -->
+    <section class="shop-cart-section" id="shoppingCart">
+      <div class="container">
+
+        <div class="shop-cart-heading">
+
+          <div>
+            <span class="section-eyebrow">YOUR SELECTION</span>
+            <h2>Shopping Cart</h2>
+            <p>Review the products you have selected.</p>
+          </div>
+
+          <button
+            type="button"
+            class="shop-clear-cart-button"
+            id="clearCartButton"
+          >
+            Clear Cart
+          </button>
+
+        </div>
+
+        <div class="shop-cart-layout">
+
+          <!-- CART ITEMS -->
+          <div
+            class="shop-cart-items"
+            id="shopCartItems"
+            aria-live="polite"
+          >
+
+            <div class="shop-cart-empty">
+
+              <img
+                src="assets/shop/cart.webp"
+                alt=""
+                loading="lazy"
+              >
+
+              <h3>Your cart is empty</h3>
+
+              <p>
+                Add products from our collection to see them here.
+              </p>
+
+              <a href="#shopProducts" class="btn btn-primary">
+                Browse Products
+              </a>
+
+            </div>
+
+          </div>
+
+          <!-- CART SUMMARY -->
+          <aside class="shop-cart-summary">
+
+            <span class="section-eyebrow">ORDER OVERVIEW</span>
+
+            <h3>Cart Summary</h3>
+
+            <div class="shop-cart-summary-row">
+              <span>Items</span>
+              <strong id="cartSummaryText">0 items</strong>
+            </div>
+
+            <div class="shop-cart-summary-divider"></div>
+
+            <div class="shop-cart-summary-row shop-cart-total-row">
+              <span>Estimated Total</span>
+              <strong id="cartTotal">₹0</strong>
+            </div>
+
+            <p class="shop-cart-disclaimer">
+              This is a frontend shopping demo. No payment will be processed.
+            </p>
+
+            <a
+              href="contact.html"
+              class="shop-cart-contact-button"
+            >
+              Enquire About Products
+            </a>
+
+            <a
+              href="services.html"
+              class="shop-cart-services-link"
+            >
+              Explore Auto Care Services →
+            </a>
+
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CUSTOMER SUPPORT -->
+    <section class="shop-support-section">
+      <div class="container">
+
+        <div class="shop-support-banner">
+
+          <div class="shop-support-content">
+
+            <span class="section-eyebrow">NEED A HAND?</span>
+
+            <h2>Not Sure Which Part Fits Your Car?</h2>
+
+            <p>
+              Our team can help you find suitable automotive products
+              for your vehicle and maintenance needs.
+            </p>
+
+            <div class="shop-support-actions">
+
+              <a href="contact.html">
+                Talk to Our Team
+              </a>
+
+              <a href="services.html" class="secondary">
+                Explore Services
+              </a>
+
+            </div>
+
+          </div>
+
+          <div class="shop-support-visual" aria-hidden="true">
+
+            <img
+              src="assets/shop/talk to our team.webp"
+              alt=""
+              loading="lazy"
+            >
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-main">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+
+          <a href="index.html" class="site-logo footer-logo">
+
+            <img
+              src="assets/logo/stackly%20logo.webp"
+              alt="STACKLY AUTO CARE"
+              loading="lazy"
+            >
+
+          </a>
+
+          <p>
+            Keeping you moving with thoughtful automotive care,
+            dependable parts and a better driving experience.
+          </p>
+
+        </div>
+
+        <!-- EXPLORE -->
+        <div>
+
+          <h3 class="footer-heading">Quick Links</h3>
+
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li>
+              <a href="shop.html" aria-current="page">
+                Shop
+              </a>
+            </li>
+            <li><a href="about.html">About</a></li>
+            
+          </ul>
+
+        </div>
+
+        <!-- CUSTOMER CARE -->
+        <div>
+
+          <h3 class="footer-heading">Customer Care</h3>
+
+          <ul class="footer-links">
+            <li><a href="login.html">My Account</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Help &amp; Support</a></li>
+          </ul>
+
+        </div>
+
+        <!-- GET IN TOUCH -->
+        <div>
+
+          <h3 class="footer-heading">Get in Touch</h3>
+
+          <div class="footer-contact">
+
+            <p class="footer-contact-item">
+              <span aria-hidden="true">✉</span>
+
+              <a href="mailto:support@autocare.example">
+                support@autocare.example
+              </a>
+            </p>
+
+            <p class="footer-contact-item">
+              <span aria-hidden="true">⌖</span>
+
+              <span>Automotive care, made simple</span>
+            </p>
+
+          </div>
+
+          <!-- EMAIL FORM -->
+          <form class="footer-email-form" id="footerEmailForm">
+
+            <label for="footerEmail" class="footer-email-label">
+              Stay connected with us
+            </label>
+
+            <div class="footer-email-controls">
+
+              <input
+                type="email"
+                id="footerEmail"
+                name="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required
+              >
+
+              <button type="submit" class="footer-email-submit">
+                Send
+              </button>
+
+            </div>
+
+            <p
+              class="footer-email-feedback"
+              id="footerEmailFeedback"
+              role="status"
+              aria-live="polite"
+            ></p>
+
+          </form>
+
+        </div>
+
+      </div>
+
+      <!-- FOOTER BOTTOM -->
+      <div class="footer-bottom">
+
+        <p>
+          © <span data-current-year>2026</span> STACKLY AUTO CARE.
+          All rights reserved.
+        </p>
+
+        <div class="footer-legal">
+          <a href="contact.html">Privacy</a>
+          <a href="contact.html">Terms</a>
+          <a href="contact.html">Cookies</a>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button
+    class="back-to-top"
+    type="button"
+    aria-label="Back to top"
+    title="Back to top"
+  >
+    ↑
+  </button>
+
+  <!-- SHARED JAVASCRIPT -->
+  <script src="common.js" defer></script>
+  <script src="shop.js" defer></script>
+
+</body>
+</html>
+

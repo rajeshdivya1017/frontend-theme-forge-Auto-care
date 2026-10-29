@@ -1,0 +1,1408 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Manage your vehicles, automotive services, orders and account with the STACKLY AUTO CARE customer dashboard."
+  >
+
+  <meta name="theme-color" content="#101d3a">
+
+  <title>My Dashboard | STACKLY AUTO CARE</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="dashboard.css">
+
+  <script src="common.js" defer></script>
+  <script src="dashboard.js" defer></script>
+</head>
+
+<body class="dashboard-page is-loading">
+
+  <!-- =====================================================
+       CAR PRELOADER
+       Preserve the shared STACKLY AUTO CARE preloader.
+  ====================================================== -->
+
+  <div
+    class="preloader"
+    id="preloader"
+    aria-label="Loading STACKLY AUTO CARE dashboard"
+  >
+    <div class="preloader-content">
+      <div class="preloader-logo">
+        STACKLY <span>AUTO CARE</span>
+      </div>
+
+      <div class="preloader-car" aria-hidden="true">🏎️</div>
+
+      <p class="preloader-message">
+        Preparing your dashboard...
+      </p>
+
+      <div class="preloader-track">
+        <div class="preloader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =====================================================
+       SHARED SITE HEADER
+  ====================================================== -->
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+
+      <a
+        class="site-logo"
+        href="index.html"
+        aria-label="STACKLY AUTO CARE Home"
+      >
+        <img
+          src="assets/logo/stackly%20logo.webp"
+          alt="STACKLY AUTO CARE"
+        >
+      </a>
+
+      <nav
+        class="nav-links"
+        id="navLinks"
+        aria-label="Main navigation"
+      >
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="shop.html">Shop</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+
+        <div class="mobile-nav-actions">
+          <a
+            class="btn btn-primary btn-full mobile-login-button"
+            href="login.html"
+          >
+            Sign In
+          </a>
+
+          <a
+            class="btn btn-primary btn-full mobile-book-button"
+            href="services.html"
+          >
+            Book a Service
+          </a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a
+          class="btn btn-outline header-login"
+          href="login.html"
+        >
+          Sign In
+        </a>
+
+        <a
+          class="btn btn-primary header-book-service"
+          href="services.html"
+        >
+          Book a Service
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- =====================================================
+       DASHBOARD INTRODUCTION
+  ====================================================== -->
+
+  <section class="dashboard-intro">
+    <div class="container dashboard-intro-inner">
+
+      <div class="dashboard-welcome">
+        <span class="section-eyebrow">
+          YOUR PERSONAL SPACE
+        </span>
+
+        <h1>
+          Welcome back<span class="dashboard-title-dot">.</span>
+        </h1>
+
+        <p>
+          Manage your vehicles, track your services and keep
+          everything about your automotive journey in one place.
+        </p>
+      </div>
+
+      <div class="dashboard-intro-actions">
+        <a
+          href="services.html"
+          class="btn btn-primary"
+        >
+          + Book a Service
+        </a>
+
+        <button
+          class="dashboard-icon-button"
+          id="notificationButton"
+          type="button"
+          aria-label="View notifications"
+          aria-haspopup="dialog"
+          aria-controls="notificationModal"
+        >
+          <span aria-hidden="true">♧</span>
+          <span
+            class="dashboard-notification-dot"
+            aria-hidden="true"
+          ></span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       DASHBOARD CONTENT
+  ====================================================== -->
+
+  <main class="dashboard-content">
+    <div class="container">
+
+      <div class="dashboard-layout">
+
+        <!-- ===============================================
+             SIDEBAR
+        ================================================ -->
+
+        <aside
+          class="dashboard-sidebar"
+          aria-label="Dashboard navigation"
+        >
+
+          <div class="dashboard-profile">
+
+            <div
+              class="dashboard-avatar"
+              id="dashboardAvatar"
+              aria-label="User profile"
+            >
+              AC
+            </div>
+
+            <div class="dashboard-profile-info">
+              <strong id="dashboardUserName">
+                Customer
+              </strong>
+
+              <span>Valued Customer</span>
+            </div>
+
+            <span
+              class="dashboard-profile-menu"
+              aria-hidden="true"
+            >
+              •••
+            </span>
+
+          </div>
+
+          <div class="dashboard-sidebar-divider"></div>
+
+          <span class="dashboard-sidebar-label">
+            WORKSPACE
+          </span>
+
+          <nav
+            class="dashboard-sidebar-nav"
+            aria-label="Dashboard sections"
+          >
+
+            <a
+              class="dashboard-side-link active"
+              href="dashboard.html"
+              aria-current="page"
+            >
+              <span
+                class="dashboard-side-icon"
+                aria-hidden="true"
+              >▦</span>
+              <span>Overview</span>
+            </a>
+
+            <a
+              class="dashboard-side-link"
+              href="#vehicleSection"
+            >
+              <span
+                class="dashboard-side-icon"
+                aria-hidden="true"
+              >🚘</span>
+              <span>My Vehicles</span>
+              <span
+                class="dashboard-side-count"
+                id="vehicleCount"
+              >1</span>
+            </a>
+
+            <a
+              class="dashboard-side-link"
+              href="#upcomingServiceSection"
+            >
+              <span
+                class="dashboard-side-icon"
+                aria-hidden="true"
+              >🔧</span>
+              <span>My Services</span>
+            </a>
+
+            <a
+              class="dashboard-side-link"
+              href="#recentOrdersSection"
+            >
+              <span
+                class="dashboard-side-icon"
+                aria-hidden="true"
+              >▤</span>
+              <span>My Orders</span>
+              <span
+                class="dashboard-side-count"
+                id="orderCount"
+              >3</span>
+            </a>
+
+            <a
+              class="dashboard-side-link"
+              href="shop.html"
+            >
+              <span
+                class="dashboard-side-icon"
+                aria-hidden="true"
+              >🛒</span>
+              <span>Spare Parts Shop</span>
+            </a>
+
+            <a
+              class="dashboard-side-link"
+              href="contact.html"
+            >
+              <span
+                class="dashboard-side-icon"
+                aria-hidden="true"
+              >✉</span>
+              <span>Help &amp; Support</span>
+            </a>
+
+            <a
+              class="dashboard-side-link"
+              href="login.html"
+              id="dashboardLogoutLink"
+            >
+              <span
+                class="dashboard-side-icon"
+                aria-hidden="true"
+              >↪</span>
+              <span>Log Out</span>
+            </a>
+
+          </nav>
+
+          <div class="dashboard-sidebar-promo">
+
+            <div
+              class="dashboard-promo-icon"
+              aria-hidden="true"
+            >
+              ✦
+            </div>
+
+            <h3>
+              Keep your car in great shape.
+            </h3>
+
+            <p>
+              Book your next maintenance service and keep moving
+              with confidence.
+            </p>
+
+            <a href="services.html">
+              Explore Services <span aria-hidden="true">→</span>
+            </a>
+
+          </div>
+
+        </aside>
+
+
+        <!-- ===============================================
+             MAIN WORKSPACE
+        ================================================ -->
+
+        <div class="dashboard-workspace">
+
+          <!-- Search toolbar -->
+
+          <div class="dashboard-toolbar">
+
+            <label class="dashboard-search">
+              <span aria-hidden="true">⌕</span>
+
+              <input
+                type="search"
+                id="dashboardSearch"
+                placeholder="Search recent orders..."
+                aria-label="Search recent orders"
+                autocomplete="off"
+              >
+
+              <kbd>ESC</kbd>
+            </label>
+
+            <div class="dashboard-toolbar-profile">
+
+              <span
+                class="dashboard-toolbar-status"
+                aria-hidden="true"
+              ></span>
+
+              <div>
+                <strong id="dashboardToolbarUserName">
+                  Customer
+                </strong>
+
+                <span>Account active</span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =============================================
+               DASHBOARD STATISTICS
+          ============================================== -->
+
+          <section
+            class="dashboard-stats-grid"
+            aria-label="Account statistics"
+          >
+
+            <article class="dashboard-stat-card">
+
+              <div class="dashboard-stat-top">
+                <span class="dashboard-stat-label">
+                  My Vehicles
+                </span>
+
+                <span
+                  class="dashboard-stat-icon vehicle-stat-icon"
+                  aria-hidden="true"
+                >🚘</span>
+              </div>
+
+              <div
+                class="dashboard-stat-value"
+                id="vehicleStatValue"
+              >1</div>
+
+              <div class="dashboard-stat-bottom">
+                <span class="dashboard-stat-dot blue-dot"></span>
+                Vehicles in your account
+              </div>
+
+            </article>
+
+
+            <article class="dashboard-stat-card">
+
+              <div class="dashboard-stat-top">
+                <span class="dashboard-stat-label">
+                  Upcoming Services
+                </span>
+
+                <span
+                  class="dashboard-stat-icon service-stat-icon"
+                  aria-hidden="true"
+                >🔧</span>
+              </div>
+
+              <div
+                class="dashboard-stat-value"
+                id="serviceStatValue"
+              >1</div>
+
+              <div class="dashboard-stat-bottom">
+                <span class="dashboard-stat-dot orange-dot"></span>
+                Stay on top of maintenance
+              </div>
+
+            </article>
+
+
+            <article class="dashboard-stat-card">
+
+              <div class="dashboard-stat-top">
+                <span class="dashboard-stat-label">
+                  Recent Orders
+                </span>
+
+                <span
+                  class="dashboard-stat-icon order-stat-icon"
+                  aria-hidden="true"
+                >📦</span>
+              </div>
+
+              <div
+                class="dashboard-stat-value"
+                id="orderStatValue"
+              >3</div>
+
+              <div class="dashboard-stat-bottom">
+                <span class="dashboard-stat-dot green-dot"></span>
+                Your latest purchases
+              </div>
+
+            </article>
+
+          </section>
+
+
+          <!-- =============================================
+               VEHICLE + UPCOMING SERVICE
+          ============================================== -->
+
+          <div class="dashboard-primary-grid">
+
+            <!-- Vehicle panel -->
+
+            <section
+              class="dashboard-panel"
+              id="vehicleSection"
+            >
+
+              <div class="dashboard-panel-heading">
+
+                <div>
+                  <span class="dashboard-panel-eyebrow">
+                    YOUR GARAGE
+                  </span>
+
+                  <h2>My Vehicle</h2>
+                </div>
+
+                <button
+                  class="dashboard-text-button"
+                  id="addVehicleButton"
+                  type="button"
+                >
+                  + Add Vehicle
+                </button>
+
+              </div>
+
+
+              <article class="dashboard-vehicle-card">
+
+                <div class="dashboard-vehicle-image">
+
+                  <img
+                    class="dashboard-vehicle-photo"
+                    src="assets/home/hero images.webp"
+                    alt="Car parked outdoors"
+                    loading="lazy"
+                  >
+
+                  <span class="dashboard-vehicle-badge">
+                    MY GARAGE
+                  </span>
+
+                  <div class="dashboard-vehicle-image-bottom">
+                    <span>VEHICLE PROFILE</span>
+                    <span>STACKLY AUTO CARE</span>
+                  </div>
+
+                </div>
+
+
+                <div class="dashboard-vehicle-info">
+
+                  <div>
+                    <span class="dashboard-vehicle-category">
+                      REGISTERED VEHICLE
+                    </span>
+
+                    <h3 id="vehicleName">
+                      Add your vehicle
+                    </h3>
+
+                    <p id="vehicleDetails">
+                      Add your vehicle details to personalise
+                      your dashboard.
+                    </p>
+                  </div>
+
+                  <button
+                    class="dashboard-round-arrow"
+                    id="editVehicleButton"
+                    type="button"
+                    aria-label="Edit vehicle details"
+                  >
+                    ↗
+                  </button>
+
+                </div>
+
+
+                <div class="dashboard-vehicle-meta">
+
+                  <div>
+                    <span>Registration Number</span>
+
+                    <strong id="vehicleRegistration">
+                      Not provided
+                    </strong>
+                  </div>
+
+                  <div>
+                    <span>Last Service</span>
+
+                    <strong id="vehicleLastService">
+                      Not provided
+                    </strong>
+                  </div>
+
+                </div>
+
+              </article>
+
+            </section>
+
+
+            <!-- Upcoming service panel -->
+
+            <section
+              class="dashboard-panel"
+              id="upcomingServiceSection"
+            >
+
+              <div class="dashboard-panel-heading">
+
+                <div>
+                  <span class="dashboard-panel-eyebrow">
+                    MAINTENANCE
+                  </span>
+
+                  <h2>Upcoming Service</h2>
+                </div>
+
+                <span
+                  class="dashboard-heading-icon"
+                  aria-hidden="true"
+                >◷</span>
+
+              </div>
+
+
+              <article class="dashboard-upcoming-card">
+
+                <img
+                  class="dashboard-service-photo"
+                  src="assets/home/general servicing.webp"
+                  alt="Automotive technician inspecting a vehicle"
+                  loading="lazy"
+                >
+
+                <div class="dashboard-service-top">
+
+                  <span
+                    class="dashboard-service-icon"
+                    aria-hidden="true"
+                  >🔧</span>
+
+                  <span class="dashboard-status-badge">
+                    <span></span>
+                    Reminder
+                  </span>
+
+                </div>
+
+                <h3>Keep Your Vehicle Road-Ready</h3>
+
+                <p>
+                  Regular maintenance helps improve performance
+                  and keeps your vehicle ready for the road.
+                </p>
+
+                <div class="dashboard-service-divider"></div>
+
+                <div class="dashboard-service-detail">
+
+                  <span aria-hidden="true">📅</span>
+
+                  <div>
+                    <span>Recommended Action</span>
+                    <strong>Schedule your next maintenance visit</strong>
+                  </div>
+
+                </div>
+
+                <div class="dashboard-service-detail">
+
+                  <span aria-hidden="true">🚘</span>
+
+                  <div>
+                    <span>Vehicle</span>
+                    <strong id="serviceVehicleName">
+                      Your registered vehicle
+                    </strong>
+                  </div>
+
+                </div>
+
+                <a
+                  href="services.html"
+                  class="btn btn-primary dashboard-service-button"
+                >
+                  Explore Services
+                  <span aria-hidden="true">→</span>
+                </a>
+
+              </article>
+
+            </section>
+
+          </div>
+
+
+          <!-- =============================================
+               PROMOTIONAL BANNER
+          ============================================== -->
+
+          <section
+            class="dashboard-offer-banner"
+            aria-label="Automotive service promotion"
+          >
+
+            <div class="dashboard-offer-content">
+
+              <span class="dashboard-offer-eyebrow">
+                THE STACKLY EXPERIENCE
+              </span>
+
+              <h2>
+                Better Care.<br>
+                Better Drives.
+              </h2>
+
+              <p>
+                From essential maintenance to quality spare parts,
+                discover automotive care designed around you.
+              </p>
+
+              <div class="dashboard-offer-actions">
+
+                <a href="services.html" class="btn">
+                  Book a Service
+                </a>
+
+                <a
+                  href="shop.html"
+                  class="dashboard-offer-link"
+                >
+                  Explore Shop
+                  <span aria-hidden="true">→</span>
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <div
+              class="dashboard-offer-decoration"
+              aria-hidden="true"
+            >
+
+              <img
+                class="dashboard-offer-photo"
+                src="assets/home/sports car.webp"
+                alt=""
+                loading="lazy"
+              >
+
+              <span
+                class="dashboard-offer-ring offer-ring-one"
+              ></span>
+
+              <span
+                class="dashboard-offer-ring offer-ring-two"
+              ></span>
+
+            </div>
+
+          </section>
+
+
+          <!-- =============================================
+               RECENT ORDERS
+          ============================================== -->
+
+          <section
+            class="dashboard-panel dashboard-orders-panel"
+            id="recentOrdersSection"
+          >
+
+            <div class="dashboard-panel-heading">
+
+              <div>
+                <span class="dashboard-panel-eyebrow">
+                  PURCHASE HISTORY
+                </span>
+
+                <h2>Recent Orders</h2>
+              </div>
+
+              <a
+                href="shop.html"
+                class="dashboard-text-link"
+              >
+                Visit Shop
+                <span aria-hidden="true">→</span>
+              </a>
+
+            </div>
+
+
+            <div class="dashboard-table-wrap">
+
+              <table class="dashboard-orders-table">
+
+                <thead>
+                  <tr>
+                    <th scope="col">ORDER ID</th>
+                    <th scope="col">PRODUCT</th>
+                    <th scope="col">DATE</th>
+                    <th scope="col">AMOUNT</th>
+                    <th scope="col">STATUS</th>
+                  </tr>
+                </thead>
+
+                <tbody id="recentOrdersBody">
+
+                  <tr>
+                    <td>
+                      <span class="dashboard-order-id">
+                        #AC-1001
+                      </span>
+                    </td>
+
+                    <td>
+                      <div class="dashboard-order-product">
+
+                        <img
+                          class="dashboard-order-product-image"
+                          src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&amp;fit=crop&amp;w=120&amp;q=75"
+                          alt=""
+                          loading="lazy"
+                        >
+
+                        <div>
+                          <strong>Engine Oil</strong>
+                          <span>Automotive Care</span>
+                        </div>
+
+                      </div>
+                    </td>
+
+                    <td>—</td>
+                    <td>—</td>
+
+                    <td>
+                      <span class="dashboard-order-status status-completed">
+                        Completed
+                      </span>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>
+                      <span class="dashboard-order-id">
+                        #AC-1002
+                      </span>
+                    </td>
+
+                    <td>
+                      <div class="dashboard-order-product">
+
+                        <img
+                          class="dashboard-order-product-image"
+                          src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&amp;fit=crop&amp;w=120&amp;q=75"
+                          alt=""
+                          loading="lazy"
+                        >
+
+                        <div>
+                          <strong>Car Care Kit</strong>
+                          <span>Maintenance Supplies</span>
+                        </div>
+
+                      </div>
+                    </td>
+
+                    <td>—</td>
+                    <td>—</td>
+
+                    <td>
+                      <span class="dashboard-order-status status-processing">
+                        Processing
+                      </span>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>
+                      <span class="dashboard-order-id">
+                        #AC-1003
+                      </span>
+                    </td>
+
+                    <td>
+                      <div class="dashboard-order-product">
+
+                        <img
+                          class="dashboard-order-product-image"
+                          src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&amp;fit=crop&amp;w=120&amp;q=75"
+                          alt=""
+                          loading="lazy"
+                        >
+
+                        <div>
+                          <strong>Air Filter</strong>
+                          <span>Vehicle Spare Parts</span>
+                        </div>
+
+                      </div>
+                    </td>
+
+                    <td>—</td>
+                    <td>—</td>
+
+                    <td>
+                      <span class="dashboard-order-status status-pending">
+                        Pending
+                      </span>
+                    </td>
+                  </tr>
+
+                </tbody>
+
+              </table>
+
+            </div>
+
+
+            <div class="dashboard-orders-footer">
+              <span>Showing your recent orders</span>
+
+              <a href="shop.html">
+                Browse Spare Parts
+              </a>
+            </div>
+
+          </section>
+
+
+          <!-- =============================================
+               QUICK ACTIONS
+          ============================================== -->
+
+          <section class="dashboard-quick-actions">
+
+            <div class="dashboard-panel-heading">
+
+              <div>
+                <span class="dashboard-panel-eyebrow">
+                  QUICK ACCESS
+                </span>
+
+                <h2>What would you like to do?</h2>
+              </div>
+
+            </div>
+
+
+            <div class="dashboard-quick-grid">
+
+              <a
+                class="dashboard-quick-card"
+                href="services.html"
+              >
+
+                <img
+                  class="dashboard-quick-image"
+                  src="assets/services/service.webp"
+                  alt=""
+                  loading="lazy"
+                >
+
+                <div class="dashboard-quick-text">
+                  <strong>Book a Service</strong>
+                  <span>Schedule vehicle maintenance</span>
+                </div>
+
+                <span
+                  class="dashboard-quick-arrow"
+                  aria-hidden="true"
+                >↗</span>
+
+              </a>
+
+
+              <a
+                class="dashboard-quick-card"
+                href="shop.html"
+              >
+
+                <img
+                  class="dashboard-quick-image"
+                  src="assets/shop/car parts.webp"
+                  alt=""
+                  loading="lazy"
+                >
+
+                <div class="dashboard-quick-text">
+                  <strong>Shop Spare Parts</strong>
+                  <span>Explore automotive essentials</span>
+                </div>
+
+                <span
+                  class="dashboard-quick-arrow"
+                  aria-hidden="true"
+                >↗</span>
+
+              </a>
+
+
+              <a
+                class="dashboard-quick-card"
+                href="contact.html"
+              >
+
+                <img
+                  class="dashboard-quick-image"
+                  src="assets/services/discussion.webp"
+                  alt=""
+                  loading="lazy"
+                >
+
+                <div class="dashboard-quick-text">
+                  <strong>Contact Support</strong>
+                  <span>We are here to help</span>
+                </div>
+
+                <span
+                  class="dashboard-quick-arrow"
+                  aria-hidden="true"
+                >↗</span>
+
+              </a>
+
+            </div>
+
+          </section>
+
+        </div>
+        <!-- End dashboard workspace -->
+
+      </div>
+      <!-- End dashboard layout -->
+
+    </div>
+  </main>
+
+
+  <!-- =====================================================
+       ADD / EDIT VEHICLE MODAL
+  ====================================================== -->
+
+  <dialog
+    class="dashboard-modal"
+    id="vehicleModal"
+    aria-labelledby="vehicleModalTitle"
+  >
+
+    <form class="dashboard-modal-form" id="vehicleForm">
+
+      <div class="dashboard-modal-heading">
+
+        <div>
+          <span class="dashboard-panel-eyebrow">
+            YOUR GARAGE
+          </span>
+
+          <h2 id="vehicleModalTitle">
+            Add Your Vehicle
+          </h2>
+        </div>
+
+        <button
+          class="dashboard-modal-close"
+          id="closeVehicleModal"
+          type="button"
+          aria-label="Close vehicle form"
+        >
+          &times;
+        </button>
+
+      </div>
+
+
+      <label for="inputVehicleName">
+        Vehicle Name *
+      </label>
+
+      <input
+        type="text"
+        id="inputVehicleName"
+        name="vehicleName"
+        placeholder="e.g. My Honda City"
+        maxlength="80"
+        autocomplete="off"
+        required
+      >
+
+
+      <label for="inputVehicleMake">
+        Make and Model *
+      </label>
+
+      <input
+        type="text"
+        id="inputVehicleMake"
+        name="vehicleMake"
+        placeholder="e.g. Honda City VX"
+        maxlength="100"
+        autocomplete="off"
+        required
+      >
+
+
+      <label for="inputVehicleRegistration">
+        Registration Number
+      </label>
+
+      <input
+        type="text"
+        id="inputVehicleRegistration"
+        name="vehicleRegistration"
+        placeholder="e.g. TN 01 AB 1234"
+        maxlength="20"
+        autocomplete="off"
+      >
+
+
+      <label for="inputVehicleLastService">
+        Last Service Date
+      </label>
+
+      <input
+        type="date"
+        id="inputVehicleLastService"
+        name="vehicleLastService"
+      >
+
+
+      <p class="dashboard-modal-note">
+        Your vehicle information is saved in this browser for
+        this demo. It is not uploaded to a server.
+      </p>
+
+
+      <div class="dashboard-modal-actions">
+
+        <button
+          class="btn dashboard-cancel-button"
+          id="cancelVehicleModal"
+          type="button"
+        >
+          Cancel
+        </button>
+
+        <button
+          class="btn btn-primary"
+          type="submit"
+        >
+          Save Vehicle
+        </button>
+
+      </div>
+
+    </form>
+
+  </dialog>
+
+
+  <!-- =====================================================
+       NOTIFICATIONS MODAL
+  ====================================================== -->
+
+  <dialog
+    class="dashboard-modal"
+    id="notificationModal"
+    aria-labelledby="notificationModalTitle"
+  >
+
+    <div class="dashboard-modal-heading">
+
+      <div>
+        <span class="dashboard-panel-eyebrow">
+          YOUR ACCOUNT
+        </span>
+
+        <h2 id="notificationModalTitle">
+          Notifications
+        </h2>
+      </div>
+
+      <button
+        class="dashboard-modal-close"
+        id="closeNotificationModal"
+        type="button"
+        aria-label="Close notifications"
+      >
+        &times;
+      </button>
+
+    </div>
+
+
+    <div class="dashboard-notification-content">
+
+      <span aria-hidden="true">🔔</span>
+
+      <p>
+        Welcome to STACKLY AUTO CARE! Add your vehicle details
+        and explore our services to get started.
+      </p>
+
+    </div>
+
+    <div class="dashboard-modal-actions">
+
+      <button
+        class="btn btn-primary"
+        id="dismissNotificationButton"
+        type="button"
+      >
+        Got It
+      </button>
+
+    </div>
+
+  </dialog>
+
+
+  <!-- =====================================================
+       SHARED SITE FOOTER
+  ====================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-main">
+
+        <div class="footer-brand">
+
+          <a
+            href="index.html"
+            class="site-logo footer-logo"
+            aria-label="STACKLY AUTO CARE Home"
+          >
+            <img
+              src="assets/logo/stackly%20logo.webp"
+              alt="STACKLY AUTO CARE"
+              loading="lazy"
+            >
+          </a>
+
+          <p>
+            Keeping you moving with thoughtful automotive care,
+            dependable parts and a better driving experience.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3 class="footer-heading">
+            Quick Links
+          </h3>
+
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="shop.html">Spare Parts Shop</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h3 class="footer-heading">
+            Customer Care
+          </h3>
+
+          <ul class="footer-links">
+            <li><a href="dashboard.html">My Dashboard</a></li>
+            <li><a href="services.html">Book a Service</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Help &amp; Support</a></li>
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h3 class="footer-heading">
+            Get in Touch
+          </h3>
+
+          <div class="footer-contact">
+
+            <p class="footer-contact-item">
+              <span aria-hidden="true">✉</span>
+
+              <a href="mailto:support@autocare.example">
+                support@autocare.example
+              </a>
+            </p>
+
+            <p class="footer-contact-item">
+              <span aria-hidden="true">⌖</span>
+
+              <span>
+                Automotive care, made simple
+              </span>
+            </p>
+
+          </div>
+
+
+          <form
+            class="footer-email-form"
+            id="footerEmailForm"
+          >
+
+            <label
+              for="footerEmail"
+              class="footer-email-label"
+            >
+              Stay connected with us
+            </label>
+
+            <div class="footer-email-controls">
+
+              <input
+                type="email"
+                id="footerEmail"
+                name="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required
+              >
+
+              <button
+                type="submit"
+                class="footer-email-submit"
+              >
+                Send
+              </button>
+
+            </div>
+
+            <p
+              class="footer-email-feedback"
+              id="footerEmailFeedback"
+              role="status"
+              aria-live="polite"
+            ></p>
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p>
+          &copy; <span data-current-year>2026</span>
+          STACKLY AUTO CARE. All rights reserved.
+        </p>
+
+        <div class="footer-legal">
+          <a href="contact.html">Privacy</a>
+          <a href="contact.html">Terms</a>
+          <a href="contact.html">Cookies</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       BACK TO TOP
+  ====================================================== -->
+
+  <button
+    class="back-to-top"
+    id="backToTop"
+    type="button"
+    aria-label="Back to top"
+  >
+    ↑
+  </button>
+
+</body>
+</html>
+

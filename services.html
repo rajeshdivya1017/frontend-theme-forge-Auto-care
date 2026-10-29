@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+name="description"
+content="Explore STACKLY Auto Care vehicle maintenance, diagnostics, brake repair, engine repair and other automotive services."
+
+>
+
+  <meta name="theme-color" content="#101d3a">
+
+  <title>Automotive Services | STACKLY Auto Care</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="services.css">
+
+  <script src="common.js" defer></script>
+
+  <script src="services.js" defer></script>
+
+</head>
+
+<body class="services-page">
+
+  <!-- SHARED PRELOADER -->
+
+  <div class="preloader" id="preloader" aria-label="Loading AUTO-CARE">
+    <div class="preloader-content">
+      <div class="preloader-logo">AUTO<span>CARE</span></div>
+      <div class="preloader-car" aria-hidden="true">🏎️</div>
+      <p class="preloader-message">Preparing your journey...</p>
+      <div class="preloader-track">
+        <div class="preloader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHARED HEADER -->
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+
+
+  <a class="site-logo" href="index.html" aria-label="STACKLY AUTO CARE Home">
+    <img
+      src="assets/logo/stackly%20logo.webp"
+      alt="STACKLY AUTO CARE"
+    >
+  </a>
+
+  <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link active" href="services.html" aria-current="page">Services</a>
+    <a class="nav-link" href="shop.html">Shop</a>
+    <a class="nav-link" href="about.html">About</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+
+    <div class="mobile-nav-actions">
+      <a class="btn btn-primary" href="login.html">Sign In</a>
+    </div>
+  </nav>
+
+  <div class="header-actions">
+    <a class="btn btn-outline header-login" href="login.html">
+      Sign In
+    </a>
+
+    <a class="btn btn-primary" href="#serviceBooking">
+      Book a Service
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+</div>
+
+
+  </header>
+
+  <main>
+
+
+<!-- SERVICES HERO -->
+<section class="services-hero">
+  <div class="container services-hero-inner">
+
+    <div class="services-hero-copy reveal">
+      <span class="section-eyebrow">COMPLETE AUTOMOTIVE CARE</span>
+
+      <h1>
+        Expert Care for<br>
+        <span>Every Mile.</span>
+      </h1>
+
+      <p>
+        From routine maintenance to advanced diagnostics,
+        discover automotive services designed to keep your
+        vehicle dependable and road-ready.
+      </p>
+
+      <div class="services-hero-actions">
+        <a class="btn btn-primary" href="#serviceList">
+          Explore Services <span aria-hidden="true">→</span>
+        </a>
+
+        <a class="services-secondary-link" href="contact.html">
+          Talk to Our Team <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <div class="services-hero-trust">
+        <div class="services-trust-item">
+          <span class="services-trust-icon" aria-hidden="true">✓</span>
+          <span>Careful Inspections</span>
+        </div>
+
+        <div class="services-trust-item">
+          <span class="services-trust-icon" aria-hidden="true">✓</span>
+          <span>Quality-Focused Service</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="services-hero-visual reveal">
+      <div class="services-visual-glow"></div>
+
+      <div class="services-hero-image services-hero-photo">
+        <img
+          class="services-hero-real-image"
+          src="assets/services/car service hero.webp"
+          alt="Professional mechanic inspecting a vehicle in an automotive workshop"
+          fetchpriority="high"
+        >
+
+        <div class="services-image-overlay"></div>
+
+        <div class="services-image-top">
+          <span class="services-live-dot"></span>
+          <span>YOUR CAR. OUR PRIORITY.</span>
+        </div>
+
+        <div class="services-floating-card">
+          <span class="services-floating-icon" aria-hidden="true">
+            <img
+              src="assets/services/car service icon.webp"
+              alt=""
+              loading="lazy"
+            >
+          </span>
+
+          <div>
+            <strong>Complete Car Care</strong>
+            <small>Maintenance made simpler</small>
+          </div>
+        </div>
+
+        <div class="services-image-bottom">
+          <span>PRECISION</span>
+          <span class="services-image-line"></span>
+          <span>PERFORMANCE</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICE HIGHLIGHTS -->
+<section class="services-highlights" aria-label="Our service benefits">
+  <div class="container services-highlights-grid">
+
+    <article class="services-highlight">
+      <span class="services-highlight-icon">
+        <img src="assets/services/expert attention.webp" alt="" loading="lazy">
+      </span>
+      <div>
+        <h3>Expert Attention</h3>
+        <p>Careful vehicle assessments</p>
+      </div>
+    </article>
+
+    <article class="services-highlight">
+      <span class="services-highlight-icon">
+        <img src="assets/services/modern diagnostics.webp" alt="" loading="lazy">
+      </span>
+      <div>
+        <h3>Modern Diagnostics</h3>
+        <p>Identify issues efficiently</p>
+      </div>
+    </article>
+
+    <article class="services-highlight">
+      <span class="services-highlight-icon">
+        <img src="assets/services/quality parts.webp" alt="" loading="lazy">
+      </span>
+      <div>
+        <h3>Quality-Focused Parts</h3>
+        <p>Suitable parts for your car</p>
+      </div>
+    </article>
+
+    <article class="services-highlight">
+      <span class="services-highlight-icon">
+        <img src="assets/services/clear communications.webp" alt="" loading="lazy">
+      </span>
+      <div>
+        <h3>Clear Communication</h3>
+        <p>Understand your service needs</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- SERVICES LIST -->
+<section class="services-list-section" id="serviceList">
+  <div class="container">
+
+    <div class="services-section-heading reveal">
+      <span class="section-eyebrow">WHAT WE OFFER</span>
+      <h2 class="section-title">Services That Keep You Moving</h2>
+      <p class="section-description">
+        Choose a service that fits your vehicle's needs.
+        Our service team can help you understand the next steps.
+      </p>
+    </div>
+
+    <!-- SERVICE FILTERS -->
+    <div class="services-filter-bar reveal">
+      <div class="services-filter-label">
+        <span class="services-filter-indicator"></span>
+        <span>Explore by service type</span>
+      </div>
+
+      <div class="services-filter-buttons" id="serviceFilters">
+        <button
+          type="button"
+          class="services-filter-button active"
+          data-service-filter="all"
+          aria-pressed="true"
+        >All Services</button>
+
+        <button
+          type="button"
+          class="services-filter-button"
+          data-service-filter="maintenance"
+          aria-pressed="false"
+        >Maintenance</button>
+
+        <button
+          type="button"
+          class="services-filter-button"
+          data-service-filter="repair"
+          aria-pressed="false"
+        >Repairs</button>
+
+        <button
+          type="button"
+          class="services-filter-button"
+          data-service-filter="inspection"
+          aria-pressed="false"
+        >Inspection</button>
+      </div>
+    </div>
+
+    <!-- SERVICE CARDS -->
+    <div class="services-grid" id="servicesGrid">
+
+      <article class="service-card reveal" data-service-type="maintenance">
+        <div class="service-card-visual service-visual-blue">
+          <img
+            class="service-card-image"
+            src="assets/services/general servicing.webp"
+            alt="Mechanic performing routine car maintenance"
+            loading="lazy"
+          >
+          <div class="service-card-image-overlay"></div>
+          <span class="service-card-number">01</span>
+          <span class="service-card-tag">ESSENTIAL CARE</span>
+        </div>
+
+        <div class="service-card-content">
+          <span class="service-card-category">MAINTENANCE</span>
+          <h3>General Servicing</h3>
+          <p>
+            Routine maintenance to help keep your vehicle running
+            smoothly and identify everyday wear.
+          </p>
+          <ul class="service-card-points">
+            <li>Oil and filter checks</li>
+            <li>Fluid level inspection</li>
+            <li>General condition review</li>
+          </ul>
+          <a class="service-card-link" href="#serviceBooking" data-service-select="General Servicing">
+            Enquire About Service <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="service-card reveal" data-service-type="repair">
+        <div class="service-card-visual service-visual-dark">
+          <img
+            class="service-card-image"
+            src="assets/services/engine diagnoistics.webp"
+            alt="Mechanic diagnosing a vehicle engine"
+            loading="lazy"
+          >
+          <div class="service-card-image-overlay"></div>
+          <span class="service-card-number">02</span>
+          <span class="service-card-tag">ENGINE HEALTH</span>
+        </div>
+
+        <div class="service-card-content">
+          <span class="service-card-category">REPAIRS</span>
+          <h3>Engine Diagnostics</h3>
+          <p>
+            Investigate engine warning signs and performance concerns
+            to help identify potential issues.
+          </p>
+          <ul class="service-card-points">
+            <li>Diagnostic assessment</li>
+            <li>Engine performance checks</li>
+            <li>Issue identification</li>
+          </ul>
+          <a class="service-card-link" href="#serviceBooking" data-service-select="Engine Diagnostics">
+            Enquire About Service <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="service-card reveal" data-service-type="repair">
+        <div class="service-card-visual service-visual-cyan">
+          <img
+            class="service-card-image"
+            src="assets/services/brake services.webp"
+            alt="Close-up of automotive brake disc and brake pads"
+            loading="lazy"
+          >
+          <div class="service-card-image-overlay"></div>
+          <span class="service-card-number">03</span>
+          <span class="service-card-tag">ROAD SAFETY</span>
+        </div>
+
+        <div class="service-card-content">
+          <span class="service-card-category">REPAIRS</span>
+          <h3>Brake Service</h3>
+          <p>
+            Check braking components and investigate unusual sounds
+            or changes in braking performance.
+          </p>
+          <ul class="service-card-points">
+            <li>Brake component inspection</li>
+            <li>Pad and disc condition checks</li>
+            <li>Brake fluid assessment</li>
+          </ul>
+          <a class="service-card-link" href="#serviceBooking" data-service-select="Brake Service">
+            Enquire About Service <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="service-card reveal" data-service-type="maintenance">
+        <div class="service-card-visual service-visual-violet">
+          <img
+            class="service-card-image"
+            src="assets/services/ac services.webp"
+            alt="Automotive technician checking a car air conditioning system"
+            loading="lazy"
+          >
+          <div class="service-card-image-overlay"></div>
+          <span class="service-card-number">04</span>
+          <span class="service-card-tag">CABIN COMFORT</span>
+        </div>
+
+        <div class="service-card-content">
+          <span class="service-card-category">MAINTENANCE</span>
+          <h3>AC Service</h3>
+          <p>
+            Assess cooling performance and inspect common automotive
+            air-conditioning concerns.
+          </p>
+          <ul class="service-card-points">
+            <li>Cooling performance checks</li>
+            <li>Ventilation inspection</li>
+            <li>System condition review</li>
+          </ul>
+          <a class="service-card-link" href="#serviceBooking" data-service-select="AC Service">
+            Enquire About Service <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="service-card reveal" data-service-type="inspection">
+        <div class="service-card-visual service-visual-green">
+          <img
+            class="service-card-image"
+            src="assets/services/vehicle health check.webp"
+            alt="Mechanic inspecting a vehicle during a health check"
+            loading="lazy"
+          >
+          <div class="service-card-image-overlay"></div>
+          <span class="service-card-number">05</span>
+          <span class="service-card-tag">PREVENTIVE CARE</span>
+        </div>
+
+        <div class="service-card-content">
+          <span class="service-card-category">INSPECTION</span>
+          <h3>Vehicle Health Check</h3>
+          <p>
+            Review important vehicle systems to help you understand
+            maintenance priorities.
+          </p>
+          <ul class="service-card-points">
+            <li>Visual vehicle inspection</li>
+            <li>Tyre and light checks</li>
+            <li>Maintenance recommendations</li>
+          </ul>
+          <a class="service-card-link" href="#serviceBooking" data-service-select="Vehicle Health Check">
+            Enquire About Service <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="service-card reveal" data-service-type="maintenance">
+        <div class="service-card-visual service-visual-orange">
+          <img
+            class="service-card-image"
+            src="assets/services/battery and electrical.webp"
+            alt="Technician testing a car battery"
+            loading="lazy"
+          >
+          <div class="service-card-image-overlay"></div>
+          <span class="service-card-number">06</span>
+          <span class="service-card-tag">POWER &amp; STARTING</span>
+        </div>
+
+        <div class="service-card-content">
+          <span class="service-card-category">MAINTENANCE</span>
+          <h3>Battery &amp; Electrical</h3>
+          <p>
+            Check common battery, starting and electrical system
+            concerns before they interrupt your journey.
+          </p>
+          <ul class="service-card-points">
+            <li>Battery condition check</li>
+            <li>Starting system assessment</li>
+            <li>Basic electrical inspection</li>
+          </ul>
+          <a class="service-card-link" href="#serviceBooking" data-service-select="Battery &amp; Electrical">
+            Enquire About Service <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="services-no-results" id="servicesNoResults" hidden>
+      <span aria-hidden="true">🔎</span>
+      <h3>No services in this category</h3>
+      <p>Please choose another service category.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICE PROCESS -->
+<section class="services-process-section">
+  <div class="container">
+
+    <div class="services-process-heading reveal">
+      <span class="section-eyebrow">A SIMPLE PROCESS</span>
+      <h2 class="section-title">Your Service Journey</h2>
+      <p class="section-description">
+        Getting started is straightforward. Tell us what your vehicle
+        needs, and our team can help you with the next steps.
+      </p>
+    </div>
+
+    <div class="services-process-grid">
+      <article class="services-process-step reveal">
+        <div class="process-step-number">01</div>
+        <span class="process-step-icon">
+          <img src="assets/services/service needs.webp" alt="" loading="lazy">
+        </span>
+        <h3>Tell Us Your Needs</h3>
+        <p>Choose a service and share a few details about your vehicle.</p>
+      </article>
+
+      <article class="services-process-step reveal">
+        <div class="process-step-number">02</div>
+        <span class="process-step-icon">
+          <img src="assets/services/discussion.webp" alt="" loading="lazy">
+        </span>
+        <h3>Discuss the Details</h3>
+        <p>Our team can help clarify your request and discuss the next steps.</p>
+      </article>
+
+      <article class="services-process-step reveal">
+        <div class="process-step-number">03</div>
+        <span class="process-step-icon">
+          <img src="assets/services/service.webp" alt="" loading="lazy">
+        </span>
+        <h3>Plan Your Service</h3>
+        <p>Confirm the arrangements with the service team before visiting.</p>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICE ENQUIRY -->
+<section class="services-enquiry" id="serviceBooking">
+  <div class="container">
+
+    <div class="services-enquiry-layout">
+
+      <div class="services-enquiry-content reveal">
+        <span class="section-eyebrow">LET'S GET STARTED</span>
+
+        <h2>Give Your Car the Care It Deserves.</h2>
+
+        <p>
+          Have a maintenance question or need help choosing a service?
+          Send us your enquiry and let us know how we can help.
+        </p>
+
+        <ul class="services-enquiry-benefits">
+          <li>
+            <img src="assets/services/service needs.webp" alt="" loading="lazy">
+            <span>Share your service needs</span>
+          </li>
+          <li>
+            <img src="assets/services/service.webp" alt="" loading="lazy">
+            <span>Ask questions about your vehicle</span>
+          </li>
+          <li>
+            <img src="assets/services/discussion.webp" alt="" loading="lazy">
+            <span>Discuss the next steps</span>
+          </li>
+        </ul>
+
+        <div class="services-enquiry-note">
+          <span aria-hidden="true">ℹ️</span>
+          <span>
+            This demo form checks your details locally. It does not send
+            or save your enquiry to a server.
+          </span>
+        </div>
+      </div>
+
+      <div class="services-enquiry-form-wrap reveal">
+        <h3>Service Enquiry</h3>
+        <p>Complete the form and prepare your enquiry.</p>
+
+        <form id="servicesEnquiryForm">
+          <div class="services-form-group">
+            <label for="serviceCustomerName">Your Name <span>*</span></label>
+            <input
+              id="serviceCustomerName"
+              name="name"
+              type="text"
+              placeholder="Enter your name"
+              autocomplete="name"
+              minlength="2"
+              maxlength="80"
+              required
+            >
+          </div>
+
+          <div class="services-form-row">
+            <div class="services-form-group">
+              <label for="serviceCustomerEmail">Email Address <span>*</span></label>
+              <input
+                id="serviceCustomerEmail"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                maxlength="254"
+                required
+              >
+            </div>
+
+            <div class="services-form-group">
+              <label for="serviceCustomerPhone">Phone Number <span>*</span></label>
+              <input
+                id="serviceCustomerPhone"
+                name="phone"
+                type="tel"
+                placeholder="Your phone number"
+                autocomplete="tel"
+                minlength="7"
+                maxlength="20"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="services-form-group">
+            <label for="requestedService">Service Required <span>*</span></label>
+            <select id="requestedService" name="service" required>
+              <option value="">Select a service</option>
+              <option value="General Servicing">General Servicing</option>
+              <option value="Engine Diagnostics">Engine Diagnostics</option>
+              <option value="Brake Service">Brake Service</option>
+              <option value="AC Service">AC Service</option>
+              <option value="Vehicle Health Check">Vehicle Health Check</option>
+              <option value="Battery & Electrical">Battery &amp; Electrical</option>
+              <option value="Other Enquiry">Other Enquiry</option>
+            </select>
+          </div>
+
+          <div class="services-form-group">
+            <label for="serviceCustomerMessage">Tell Us More <span>*</span></label>
+            <textarea
+              id="serviceCustomerMessage"
+              name="message"
+              rows="4"
+              placeholder="Describe your vehicle or service needs..."
+              minlength="5"
+              maxlength="1000"
+              required
+            ></textarea>
+          </div>
+
+          <div class="services-form-submit">
+            <button class="services-submit-btn" type="submit">
+              Prepare Enquiry <span aria-hidden="true">→</span>
+            </button>
+            <small>Demo only. No data is sent to a server.</small>
+          </div>
+
+          <p
+            class="services-form-message"
+            id="servicesFormStatus"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="services-faq">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <span class="section-eyebrow">GOOD TO KNOW</span>
+      <h2>Frequently Asked Questions</h2>
+      <p>A few helpful answers before you get started.</p>
+    </div>
+
+    <div class="services-faq-list reveal">
+
+      <details class="services-faq-item">
+        <summary>How do I choose the right service?</summary>
+        <p>
+          Start by choosing the service that best matches your concern.
+          If you are unsure, submit an enquiry and describe the symptoms
+          or maintenance you need.
+        </p>
+      </details>
+
+      <details class="services-faq-item">
+        <summary>Can I ask about a problem before booking?</summary>
+        <p>
+          Yes. Use the service enquiry form to explain your concern.
+          The team can review your request and discuss the next steps.
+        </p>
+      </details>
+
+      <details class="services-faq-item">
+        <summary>Do all vehicles require the same parts?</summary>
+        <p>
+          No. Parts and maintenance requirements vary by vehicle model,
+          engine and manufacturer specifications. Confirm compatibility
+          before purchasing or installing a part.
+        </p>
+      </details>
+
+      <details class="services-faq-item">
+        <summary>Does this page confirm an appointment?</summary>
+        <p>
+          No. This website currently demonstrates the enquiry experience.
+          An appointment is confirmed only after arrangements have been
+          made directly with the service team.
+        </p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="services-final-cta">
+  <div class="container">
+    <div class="services-final-cta-inner reveal">
+
+      <div class="services-final-cta-content">
+        <span class="section-eyebrow">YOUR NEXT JOURNEY STARTS HERE</span>
+        <h2>Need Parts Instead?</h2>
+        <p>
+          Explore automotive essentials and accessories in our shop.
+        </p>
+      </div>
+
+      <div class="services-final-cta-actions">
+        <a class="cta-primary" href="shop.html">
+          Explore the Shop <span aria-hidden="true">→</span>
+        </a>
+        <a class="cta-secondary" href="contact.html">
+          Contact Our Team <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  </main>
+
+  <!-- SHARED FOOTER -->
+
+  <footer class="site-footer">
+    <div class="container">
+
+
+  <div class="footer-main">
+
+    <div class="footer-brand">
+      <a href="index.html" class="site-logo footer-logo">
+        <img
+          src="assets/logo/stackly%20logo.webp"
+          alt="STACKLY AUTO CARE"
+          loading="lazy"
+        >
+      </a>
+
+      <p>
+        Keeping you moving with thoughtful automotive care,
+        dependable parts and a better driving experience.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="footer-heading">Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" aria-current="page">Services</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="footer-heading">Customer Care</h3>
+      <ul class="footer-links">
+        <li><a href="login.html">My Account</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="contact.html">Help &amp; Support</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="footer-heading">Get in Touch</h3>
+
+      <div class="footer-contact">
+        <p class="footer-contact-item">
+          <span aria-hidden="true">✉</span>
+          <a href="mailto:support@autocare.example">support@autocare.example</a>
+        </p>
+
+        <p class="footer-contact-item">
+          <span aria-hidden="true">⌖</span>
+          <span>Automotive care, made simple</span>
+        </p>
+      </div>
+
+      <form class="footer-email-form" id="footerEmailForm">
+        <label for="footerEmail" class="footer-email-label">
+          Stay connected with us
+        </label>
+
+        <div class="footer-email-controls">
+          <input
+            type="email"
+            id="footerEmail"
+            name="email"
+            placeholder="Enter your email"
+            autocomplete="email"
+            required
+          >
+          <button type="submit" class="footer-email-submit">Send</button>
+        </div>
+
+        <p
+          class="footer-email-feedback"
+          id="footerEmailFeedback"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      © <span data-current-year></span> STACKLY AUTO CARE. All rights reserved.
+    </p>
+
+    <div class="footer-legal">
+      <a href="contact.html">Privacy</a>
+      <a href="contact.html">Terms</a>
+      <a href="contact.html">Cookies</a>
+    </div>
+  </div>
+
+</div>
+
+
+  </footer>
+
+<button
+class="back-to-top"
+type="button"
+aria-label="Back to top"
+title="Back to top"
+
+> ↑</button>
+
+</body>
+</html>
+
